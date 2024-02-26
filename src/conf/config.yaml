@@ -1,0 +1,8 @@
+defaults:
+  - prompts: prompts
+openai:
+  api_key: ${oc.env:OPENAI_API_KEY}
+  vision_model: gpt-4-vision-preview
+  text_model: gpt-4-turbo-preview
+bill_type: ???
+image_url: ???
