@@ -24,7 +24,7 @@ jobs:
         cache: "pipenv"
     - name: Install dependencies with Pipenv
       run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-      run: pipenv install --dev
+    - run: pipenv install --dev
     - name: Lint with flake8
       run: |
         # Install flake8 in the Pipenv environment if not already included in the Pipfile
