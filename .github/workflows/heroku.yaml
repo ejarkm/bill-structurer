@@ -1,0 +1,38 @@
+# name: Deploy to Heroku
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+# permissions:
+#   contents: read
+
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v4
+#     - name: Set up Python 3.10
+#       uses: actions/setup-python@v5
+#       with:
+#         python-version: "3.10"
+#         cache: "pipenv"
+#     - name: Install dependencies with Pipenv
+#       run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+#     - run: pipenv install
+#     - name: Lint with flake8
+#       run: |
+#         # Install flake8 in the Pipenv environment if not already included in the Pipfile
+#         pipenv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+#         # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+#         pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+#     - name: Deploy to Heroku
+#       uses: akhileshns/heroku-deploy@v3.13.15  # Use latest version
+#       with:
+#         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+#         heroku_app_name: ${{ secrets.HEROKU_APP }}  # Set your Heroku app name
+#         heroku_email: ${{ secrets.HEROKU_EMAIL }}
