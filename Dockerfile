@@ -8,6 +8,9 @@ ENV PYTHONUNBUFFERED 1
 # Setting PYTHONPATH so that the container knows where to look for modules
 ENV PYTHONPATH /app:/app/src
 
+RUN echo ${PYTHONPATH}
+RUN echo ${INVOICE_API_KEY}
+
 # Set the working directory to /app
 WORKDIR /app
 
