@@ -1,0 +1,39 @@
+name: Invoice application
+run-name: ${{ github.actor }} is pushing some changes to the project
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build Docker image
+      run: docker build . --tag myapp:${{ github.sha }}
+
+    # Setup Node.js for Railway CLI
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+      
+    # Install Railway CLI
+    - name: Install Railway CLI
+      run: npm install -g railway
+
+    # Deploy using Railway CLI (Placeholder, adapt based on Railway's offerings)
+    - name: Deploy to Railway
+      run: |
+        echo "Deploy step goes here. This might involve logging into Railway, setting config vars, or triggering a Railway-based deployment that picks up changes from your repo."
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        INVOICE_API_KEY: ${{ secrets.INVOICE_API_KEY }}
