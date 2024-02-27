@@ -16,7 +16,7 @@ class BillRequest(BaseModel):
 
 # Dependency to extract and validate the API key from request headers
 def api_key_validator(api_key: str = Header(None, alias="INVOICE_API_KEY")):
-    expected_api_key = os.getenv("SPAIK_INVOICE_API_KEY")
+    expected_api_key = os.getenv("INVOICE_API_KEY")
     if api_key != expected_api_key:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
