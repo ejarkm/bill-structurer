@@ -33,7 +33,10 @@ jobs:
     - name: Deploy to Railway
       run: |
         echo "Deploy step goes here. This might involve logging into Railway, setting config vars, or triggering a Railway-based deployment that picks up changes from your repo."
+        echo ${{ secrets.INVOICE_API_KEY }}
+        echo $INVOICE_API_KEY
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         INVOICE_API_KEY: ${{ secrets.INVOICE_API_KEY }}
+        
