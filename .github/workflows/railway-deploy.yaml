@@ -1,5 +1,5 @@
 name: Invoice application
-run-name: ${{ github.actor }} is pushing some changes to the project
+run-name: RAILWAY Build and Deployment ${{ github.actor }} is pushing some changes to the project
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
 
     # Setup Node.js for Railway CLI
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '14'
       
