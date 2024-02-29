@@ -10,6 +10,7 @@ flake8 = "*"
 hydra-core = "*"
 openai = "*"
 python-multipart = "*"
+requests = "*"
 
 [dev-packages]
 pypdf2 = "*"
