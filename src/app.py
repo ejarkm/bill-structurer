@@ -48,13 +48,13 @@ def parse_bill(
     
     with NamedTemporaryFile(delete=False) as temp_file:
         shutil.copyfileobj(uploaded_file.file, temp_file)
-        temp_file_path = temp_file.name  # Use this temporary file path
+        temp_file_path = temp_file.name
     
     response = bill_parser(
         api_key=cfg.openai.api_key,
         model=cfg.openai.vision_model,
         system_prompt=system_prompt,
-        image_path=temp_file_path,  # Temporary file path used here
+        image_path=temp_file_path,
     )
     
     # Cleanup temporary file

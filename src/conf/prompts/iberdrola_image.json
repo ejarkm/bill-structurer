@@ -1,9 +1,9 @@
 {
     "bill_type": "string",
-    "referencia_contrato": "string",
-    "fecha_factura": "string",
-    "numero_factura": "string",
-    "importe_factura": "string",
+    "referencia_contrato": "number",
+    "fecha_factura": "date",
+    "numero_factura": "number",
+    "importe_factura": "number",
     "datos_del_contrato": {
         "nombre_contratante": "string",
         "direccion_contratante": "string",
@@ -16,30 +16,30 @@
         "m.f": "string",
         "forma_pago": "string",
         "codigo_mandato": "string",
-        "fecha_prevista_de_cargo": "string",
+        "fecha_prevista_de_cargo": "date",
     "facturacion": {
-        "total_importe_potencia_peajes": "string",
-        "total_importe_potencia_cargos": "string",
+        "total_importe_potencia_peajes": "number",
+        "total_importe_potencia_cargos": "number",
         "total_importe_potencia": {
-            "fecha": "string",
-            "importe": "string"
+            "fecha": "date",
+            "importe": "number"
         },
         "total_importe_energia_consumida_peajes": {
-            "fecha": "string",
-            "importe": "string"
+            "fecha": "date",
+            "importe": "number"
         },
         "total_importe_energia_consumida_cargos": {
-            "fecha": "string",
-            "importe": "string"
+            "fecha": "date",
+            "importe": "number"
         },
         "total_importe_energia": {
-            "fecha": "string",
-            "importe": "string"
+            "fecha": "date",
+            "importe": "number"
         },
         "impuesto_electricidad": {
-            "importe": "string"
+            "importe": "number"
         },
-        "importe_factura": "string"
+        "importe_factura": "number"
     }
     }
 }
