@@ -1,6 +1,5 @@
 {
     "bill_type": "string",
-    "hoja_numero": "string",
     "referencia_contrato": "string",
     "fecha_factura": "string",
     "numero_factura": "string",
@@ -39,7 +38,8 @@
         },
         "impuesto_electricidad": {
             "importe": "string"
-        }
+        },
+        "importe_factura": "string"
     }
     }
 }

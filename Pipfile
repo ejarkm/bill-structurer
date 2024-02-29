@@ -9,8 +9,12 @@ uvicorn = "*"
 flake8 = "*"
 hydra-core = "*"
 openai = "*"
+python-multipart = "*"
 
 [dev-packages]
+pypdf2 = "*"
+pdf2image = "*"
+pymupdf = "*"
 
 [requires]
 python_version = "3.10"
