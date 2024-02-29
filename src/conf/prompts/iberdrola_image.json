@@ -1,5 +1,4 @@
 {
-    "bill_type": "string",
     "referencia_contrato": "number",
     "fecha_factura": "date",
     "numero_factura": "number",
