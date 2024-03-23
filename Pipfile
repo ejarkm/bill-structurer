@@ -12,6 +12,7 @@ openai = "*"
 python-multipart = "*"
 requests = "*"
 pymupdf = "*"
+pillow = "*"
 
 [dev-packages]
 pypdf2 = "*"
