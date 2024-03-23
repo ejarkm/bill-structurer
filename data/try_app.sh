@@ -7,7 +7,7 @@ curl -X 'POST' \
 
 
 curl -X 'POST' \
-  'http://localhost:8000/parse-bill' \
+  'http://localhost:8000/upload-and-parse-bill' \
   -H 'INVOICE_API_KEY:111' \
   -F 'bill_type=iberdrola' \
-  -F 'uploaded_file=@/workspaces/bill-structurer/data/output.jpg'
+  -F 'uploaded_file=@/workspaces/bill-structurer/data/invoice.pdf'
