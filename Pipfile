@@ -11,11 +11,11 @@ hydra-core = "*"
 openai = "*"
 python-multipart = "*"
 requests = "*"
+pymupdf = "*"
 
 [dev-packages]
 pypdf2 = "*"
 pdf2image = "*"
-pymupdf = "*"
 
 [requires]
 python_version = "3.10"
